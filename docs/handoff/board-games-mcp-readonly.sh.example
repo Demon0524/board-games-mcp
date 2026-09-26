@@ -1,0 +1,12 @@
+#!/bin/sh
+# Administrator template: set actual paths before installing it at
+# /usr/local/bin/board-games-mcp-readonly and making it executable.
+# Code and dependencies must already be installed in the fixed directory.
+# The SSH account must be permitted to read the data, or an administrator
+# must provide a separate, narrowly scoped service-account launcher.
+set -eu
+export BOARD_GAMES_ROOT=/srv/game-data
+export BOARD_GAMES_PUBLIC_ORIGIN=https://games.example.org
+export BOARD_GAMES_IMPORT_ROOT=
+export BOARD_GAMES_READ_ONLY=1
+exec /usr/bin/node /opt/board-games-mcp/src/server.mjs

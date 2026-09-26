@@ -11,7 +11,8 @@
     "start": "node src/server.mjs",
     "player": "node player/app.js",
     "test": "node --test test/*.test.mjs",
-    "demo": "node scripts/demo-client.mjs"
+    "demo": "node scripts/demo-client.mjs",
+    "config:codex": "node scripts/codex-config.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "2.1.0",

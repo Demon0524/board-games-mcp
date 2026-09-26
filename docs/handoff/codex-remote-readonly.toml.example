@@ -1,0 +1,13 @@
+# Merge this section into your Codex config; keep unrelated settings.
+# Requires an authorized SSH identity, a verified host key and an installed wrapper.
+# This example does not create the remote script or grant server permissions.
+[mcp_servers.board_games_remote_readonly]
+command = "ssh"
+args = [
+  "-T",
+  "-o", "BatchMode=yes",
+  "-o", "StrictHostKeyChecking=yes",
+  "board-games-prod",
+  "/usr/local/bin/board-games-mcp-readonly"
+]
+startup_timeout_sec = 30

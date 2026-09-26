@@ -8,6 +8,8 @@
 
 ## 快速运行
 
+**交给其他用户使用：**先阅读[下载、运行与 Codex 接手指南](docs/handoff/README.md)。其中包含可直接复制给 Codex 的任务说明、VPN/SSH 登录步骤和远程只读配置模板；实际服务器资料由管理员单独提供。
+
 需要 Node.js 22 或更新版本。Windows PowerShell、Linux 均可运行：
 
 ```sh
@@ -35,6 +37,14 @@ npm run player
 ```
 
 默认监听 `http://127.0.0.1:3000`。MCP 和播放器的 `BOARD_GAMES_ROOT` 必须指向同一个绝对目录。默认是仓库中的 `runtime/`；如需展示 demo 结果，应使用 demo 输出的临时目录。播放器没有内容管理 HTTP 接口；MCP 不监听 HTTP 端口。
+
+自动生成包含当前机器绝对路径的 Codex 本地配置：
+
+```sh
+npm run config:codex --silent
+```
+
+默认只读；执行 `node scripts/codex-config.mjs --root "数据目录" --writable` 可生成本地编辑配置。命令只输出 TOML，不会改写现有配置。具体步骤见[接手指南](docs/handoff/README.md)。
 
 ## 工具
 

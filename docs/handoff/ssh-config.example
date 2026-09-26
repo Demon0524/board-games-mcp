@@ -1,0 +1,12 @@
+# Merge into ~/.ssh/config; replace all example values.
+Host board-games-prod
+    HostName games-host.example.org
+    User games_operator
+    Port 22
+    IdentityFile ~/.ssh/board_games_operator
+    IdentitiesOnly yes
+    StrictHostKeyChecking yes
+    ConnectTimeout 15
+    ServerAliveInterval 30
+# With an SSH Agent, IdentityFile may select the matching public key (.pub).
+# Verify the host fingerprint interactively before noninteractive MCP use.

@@ -1,0 +1,27 @@
+{
+  "key": "harbor",
+  "type": "puzzle_clue",
+  "title": "机械港湾（虚构演示）",
+  "theme": "adventure",
+  "listed": true,
+  "puzzles": [
+    {
+      "key": "missing-star",
+      "title": "灯塔徽章",
+      "surface": "一枚星形徽章出现在关闭的灯塔里，门上的封条完好。",
+      "clues": [
+        { "key": "first", "scene": "灯塔门口", "text": "封条只贴在正门上。" },
+        { "key": "second", "scene": "灯室", "text": "窗边留有一根细线。" }
+      ]
+    },
+    {
+      "key": "late-boat",
+      "title": "迟到的小船",
+      "surface": "小船准时离港，航程也没有延长，却被记为迟到。",
+      "clues": [
+        { "key": "first", "scene": "码头", "text": "出发地和目的地使用不同的时钟。" },
+        { "key": "second", "scene": "船舱", "text": "航行日志没有被修改过。" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+node_modules/
+runtime/
+state/
+data/
+storage/
+media/
+imports/
+.env
+.env.*
+*.log
+*.tgz
+*.pub
+*.pem
+*.key
+coverage/

@@ -1,0 +1,28 @@
+{
+  "key": "observatory",
+  "type": "puzzle_clue",
+  "title": "雪夜观测站（虚构演示）",
+  "theme": "mystery",
+  "listed": true,
+  "puzzles": [
+    {
+      "key": "missing-star",
+      "title": "消失的星点",
+      "surface": "观测员在同一时刻拍摄了两张照片，其中一张少了一颗星。所有设备都正常。",
+      "hostNotes": "主持人演示备注：此字段仅用于验证隔离，不应进入公开页面。",
+      "clues": [
+        { "key": "first", "scene": "观测室", "text": "镜头盖放在桌上，两台相机的朝向相同。" },
+        { "key": "second", "scene": "档案室", "text": "两张照片的曝光时长不同。" }
+      ]
+    },
+    {
+      "key": "silent-bell",
+      "title": "安静的钟声",
+      "surface": "钟楼按时敲钟，值班员却在记录中写下了“没有听见”。",
+      "clues": [
+        { "key": "first", "scene": "值班室", "text": "桌上的记录表标注了不同的观测方式。" },
+        { "key": "second", "scene": "钟楼", "text": "钟摆一直正常摆动。" }
+      ]
+    }
+  ]
+}

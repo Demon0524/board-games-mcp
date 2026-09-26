@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10171a">
+    <title>__PAGE_TITLE__</title>
+    <meta name="description" content="__DESCRIPTION__">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="/style.css?v=themes-1">
+  </head>
+  <body>
+    <div id="playlistBackdrop" class="playlist-backdrop" hidden></div>
+
+    <section id="welcome" class="welcome" hidden>
+      <p class="welcome-brand">__BRAND_NAME__ · __TAGLINE__</p>
+      <h1 id="welcomeTitle">让故事，从这里开始。</h1>
+      <p id="welcomeDescription">打开分享给你的内容链接，或用手机轻触 NFC 标签，走进对应的故事。</p>
+      <p class="welcome-hint" id="welcomeHint">跟随现场的指引，发现属于你的线索。</p>
+      <nav id="welcomeLinks" aria-label="开始收听"></nav>
+    </section>
+    <main id="playerShell" class="shell" hidden>
+      <section class="player">
+        <header class="topbar">
+          <div class="brand" aria-label="__BRAND_NAME__ · __TAGLINE__">
+            <span class="brand-mark" aria-hidden="true">__BRAND_MARK__</span>
+            <span class="brand-copy">
+              <strong>__BRAND_NAME__</strong>
+              <small>__TAGLINE__</small>
+            </span>
+          </div>
+
+          <div class="topbar-actions">
+            <div class="timebox" aria-label="播放时间">
+              <span id="currentTime">00:00</span>
+              <i aria-hidden="true"></i>
+              <span id="duration">00:00</span>
+            </div>
+            <button id="menuBtn" type="button" class="menu-btn" aria-label="显示播放列表">
+              <span class="menu-lines" aria-hidden="true"></span>
+              <span class="menu-label">目录</span>
+            </button>
+          </div>
+        </header>
+
+        <section class="now-playing" aria-live="polite">
+          <div class="chapter-disc" aria-hidden="true">
+            <span>听</span>
+          </div>
+          <div class="chapter-copy">
+            <p id="trackMeta">正在整理章节</p>
+            <h1 id="trackTitle">正在加载…</h1>
+          </div>
+        </section>
+
+        <section class="controls" aria-label="播放控制">
+          <div class="transport">
+            <button id="speedDownBtn" type="button" class="speed-button" aria-label="降低倍速">1×</button>
+            <button id="prevBtn" type="button" aria-label="上一首"><span aria-hidden="true">←</span></button>
+            <button id="playBtn" type="button" class="primary" aria-label="播放或暂停"><span class="play-symbol" aria-hidden="true"></span></button>
+            <button id="nextBtn" type="button" aria-label="下一首"><span aria-hidden="true">→</span></button>
+            <button id="speedUpBtn" type="button" class="speed-button" aria-label="提高倍速">1×</button>
+          </div>
+
+          <label class="slider-row seek-row">
+            <span>进度</span>
+            <input id="seekBar" type="range" min="0" max="1000" value="0" step="1" aria-label="播放进度">
+          </label>
+          <label class="slider-row volume-row">
+            <span>音量</span>
+            <input id="volumeBar" type="range" min="0" max="1" value="1" step="0.01" aria-label="音量">
+          </label>
+          <audio id="audio" preload="metadata"></audio>
+        </section>
+
+        <section id="lyricsPanel" class="lyrics-panel" aria-label="字幕">
+          <div class="reading-label" aria-hidden="true"><span>正文</span></div>
+          <div id="lyrics" class="lyrics"></div>
+        </section>
+
+        <div class="notices">
+          <p id="subtitleHint" class="hint"></p>
+          <p id="errorBox" class="error" role="alert"></p>
+        </div>
+      </section>
+
+      <aside id="playlistWrap" class="playlist-wrap" aria-label="播放列表">
+        <header class="playlist-heading">
+          <div>
+            <p>本辑目录</p>
+            <h2>选择章节</h2>
+          </div>
+          <button type="button" class="playlist-close" aria-label="关闭播放列表" onclick="document.getElementById('playlistBackdrop').click()">×</button>
+        </header>
+        <div id="playlist" class="playlist"></div>
+        <p class="playlist-footnote">当前链接仅展示同一辑中已开放的章节</p>
+      </aside>
+    </main>
+
+    <!-- PAGE_DATA -->
+    <noscript>请启用 JavaScript 以收听故事。</noscript>
+    <script src="/app.js?v=themes-1" defer></script>
+  </body>
+</html>

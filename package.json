@@ -1,0 +1,24 @@
+{
+  "name": "board-games-mcp",
+  "version": "1.0.0",
+  "description": "Stdio MCP for versioned board-game clue drafts, explicit publishing and stable NFC links",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/server.mjs",
+    "player": "node player/app.js",
+    "test": "node --test test/*.test.mjs",
+    "demo": "node scripts/demo-client.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.1.0",
+    "express": "4.22.3",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.1.0"
+  }
+}
